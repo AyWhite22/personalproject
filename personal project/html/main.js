@@ -13,25 +13,55 @@ var correct = 0;
     if (question2 == "New York") {
         correct++;
     }
-    if (question3 == "Centrel Perk") {
+    if (question3 == "Central Perk") {
         correct++;
+    }
+    if (question4 == "Ross and Monica") {
+        correct++;
+    }
+    if (question5 == "How you doin?") {
+        correct++;
+    if (question6 == "Guitar") {
+        correct++;
+        }
+    if (question7 == "Phoebe") {
+        correct++;
+        }
+    if (question8 == "Joey") {
+        correct++;
+        }
+    if (question9 == "Eddie") {
+        correct++;
+        }
+    if (question10 == "Matresses") {
+        correct++;
+        }
+    if (question11 == "Montauk") {
+        correct++;
+        }
+    if (question12 == "Nose job") {
+        correct++;
+        }
+    if (question13 == "Erika") {
+        correct++;
+        }
     }
 // This array picks the appropriate message depending on the amount of questions you get right.
 var messages = ["Great job!", "That's okay... I guess.", "Cmon dude! Try harder next time."];
-var pictures = ["/run/user/1001/gvfs/sftp:host=deepthought.wtahs.com/home/whitay21/public_html/personal project/images/joey.gif", "/run/user/1001/gvfs/sftp:host=deepthought.wtahs.com/home/whitay21/public_html/personal project/images/rossmeh.gif", "/run/user/1001/gvfs/sftp:host=deepthought.wtahs.com/home/whitay21/public_html/personal project/images/chandlerawful.gif" ];
+
 
 // This determines what kind of score that we want.
 var range;
 
-    if (correct < 1) {
+    if (correct < 4) {
         range = 2;
     }
 
-    if (correct > 0 && correct < 3) {
+    if (correct > 4 && correct < 8) {
         range = 1;
     }
 
-    if (correct > 2) {
+    if (correct > 8) {
         range = 0;
     }
 
@@ -42,5 +72,4 @@ var range;
     document.getElementById("message").innerHTML = messages[range];
 // This adds in the amount of questions the user got right, after they've finished the quiz.
     document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
-    document.getElementById("picture").src = pictures[range];
 }
